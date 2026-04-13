@@ -9,38 +9,28 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 <style>
-  /* Reset some default styles */
+  /* Reset */
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
-  /* Root Variables for Colors and Fonts */
-  :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --background-color: #f8f9fa;
-    --text-color: #212529;
-    --header-background: #ffffff;
-    --font-family: 'Open Sans', sans-serif;
-  }
-
+  /* Colors & Fonts */
   body {
-    font-family: var(--font-family);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
     line-height: 1.6;
-    padding-top: 70px; /* for fixed navbar */
   }
 
-  /* Navigation Styles */
+  /* Header/Nav */
   nav {
+    background-color: #007bff; /* Blue header */
+    padding: 15px 0;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--header-background);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 999;
   }
 
@@ -48,7 +38,6 @@
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 15px 0;
   }
 
   nav li {
@@ -56,47 +45,52 @@
   }
 
   nav a {
+    color: #fff;
     text-decoration: none;
-    color: var(--text-color);
     font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.3s, transform 0.2s;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: background 0.3s;
   }
 
   nav a:hover {
-    color: var(--primary-color);
-    transform: scale(1.05);
+    background-color: #0056b3;
+    border-radius: 4px;
   }
 
-  /* Sections Styles */
+  /* Sections */
 section {
-  padding: 80px 20px;
+  padding: 100px 20px;
+  padding-top: 150px; /* for fixed nav space */
   max-width: 1200px;
   margin: auto;
-  padding-top: 150px; /* for fixed nav spacing */
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 80px;
   text-align: center;
 }
 
-h1, h2 {
-  font-size: 2.5rem;
+h1 {
+  font-size: 3rem;
+  color: #007bff;
   margin-bottom: 20px;
-  color: #333;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-top: 60px;
-  color: #444;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0056b3;
 }
 
-/* Paragraph Styles */
 p {
   font-size: 1.2rem;
   margin-bottom: 20px;
   color: #555;
 }
 
-/* Services Grid */
+/* Services grid */
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -105,16 +99,15 @@ p {
 }
 
 .service-box {
-  background-color: #fff;
+  background-color: #e9f0f8;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .service-box h3 {
@@ -127,7 +120,7 @@ p {
   color: #555;
 }
 
-/* Contact Info Styles */
+/* Contact Info */
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -145,41 +138,41 @@ p {
 
 .contact-info i {
   margin-right: 10px;
-  color: var(--primary-color);
+  color: #007bff;
 }
 
-/* Button Styles (optional) */
+/* Button (optional) */
 .btn {
   display: inline-block;
   padding: 12px 25px;
   margin-top: 20px;
   font-size: 1rem;
   color: #fff;
-  background-color: var(--primary-color);
+  background-color: #007bff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
   text-decoration: none;
 }
 
 .btn:hover {
-  background-color: #0069d9;
+  background-color: #0056b3;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media(max-width: 768px) {
-  body {
-    padding-top: 70px;
-  }
-  section {
-    padding: 60px 20px;
-  }
   nav ul {
     flex-direction: column;
   }
-  nav li {
-    margin: 10px 0;
+  section {
+    padding: 80px 20px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 2rem;
   }
 }
 </style>
@@ -196,7 +189,7 @@ p {
   </ul>
 </nav>
 
-<!-- Homepage Content -->
+<!-- Home -->
 <section id="home">
   <h1>Welcome to Aparna Associates</h1>
   <p>Your trusted partner for legal and business services. We are committed to providing expert guidance and support for your business needs.</p>
@@ -232,7 +225,7 @@ p {
   </div>
 </section>
 
-<!-- Contact Info -->
+<!-- Contact -->
 <section id="contact">
   <h2>Contact Us</h2>
   <div class="contact-info">
@@ -242,7 +235,6 @@ p {
   </div>
 </section>
 
-<!-- Smooth scroll script -->
 <script>
   function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
