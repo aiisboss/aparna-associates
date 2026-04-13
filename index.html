@@ -2,244 +2,172 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aparna Associates - Home</title>
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aparna Associates</title>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 <style>
-  /* Reset */
+  /* Reset and base styles */
   * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
-
-  /* Colors & Fonts */
   body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #f0f4f8;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
   }
 
-  /* Header/Nav */
-  nav {
-    background-color: #007bff; /* Blue header */
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
+  /* Header styles */
+  header {
+    background-color: #0052cc; /* vibrant blue */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
   }
 
-  nav ul {
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  /* Navigation styles */
+  nav {
     display: flex;
     justify-content: center;
-    list-style: none;
-  }
-
-  nav li {
-    margin: 0 20px;
+    background-color: #0066ff;
   }
 
   nav a {
     color: #fff;
+    padding: 15px 20px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
-    padding: 8px 12px;
     transition: background 0.3s;
   }
 
   nav a:hover {
-    background-color: #0056b3;
-    border-radius: 4px;
+    background-color: #004999;
+  }
+
+  /* Main hero section */
+  .hero {
+    background-color: #0099ff;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
   }
 
   /* Sections */
-section {
-  padding: 100px 20px;
-  padding-top: 150px; /* for fixed nav space */
-  max-width: 1200px;
-  margin: auto;
-  background-color: #fff;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-top: 80px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 3rem;
-  color: #007bff;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #0056b3;
-}
-
-p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-/* Services grid */
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.service-box {
-  background-color: #e9f0f8;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.service-box h3 {
-  margin-bottom: 15px;
-  color: #007bff;
-}
-
-.service-box p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Contact Info */
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.contact-info i {
-  margin-right: 10px;
-  color: #007bff;
-}
-
-/* Button (optional) */
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  margin-top: 20px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-/* Responsive */
-@media(max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
   section {
-    padding: 80px 20px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
-  h1 {
-    font-size: 2.2rem;
-  }
-  h2 {
+
+  section h3 {
     font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0052cc;
+    text-align: center;
   }
-}
+
+  /* Sample content styles */
+  .content {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #0052cc;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  /* Responsive adjustments */
+  @media(max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    nav {
+      flex-direction: column;
+    }
+    nav a {
+      padding: 12px;
+    }
+  }
 </style>
 </head>
 <body>
 
+<!-- Header -->
+<header>
+  <h1>Aparna Associates</h1>
+</header>
+
 <!-- Navigation -->
 <nav>
-  <ul>
-    <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
-    <li><a href="#about" onclick="scrollToSection('about')">About Us</a></li>
-    <li><a href="#services" onclick="scrollToSection('services')">Services</a></li>
-    <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
-  </ul>
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<!-- Home -->
-<section id="home">
-  <h1>Welcome to Aparna Associates</h1>
-  <p>Your trusted partner for legal and business services. We are committed to providing expert guidance and support for your business needs.</p>
-</section>
+<!-- Hero Section -->
+<div class="hero" id="home">
+  <h2>Welcome to Aparna Associates</h2>
+  <p>Your trusted partner for legal and business services. We help you grow and stay compliant with professional expertise.</p>
+</div>
 
 <!-- About Us -->
 <section id="about">
-  <h2>About Us</h2>
-  <p>Aparna Associates is a reputed firm offering professional legal and business consultancy services. Our team is dedicated to helping your business succeed.</p>
-  <p>We specialize in incorporation, compliance, GST, income tax, trademark registration, and more.</p>
+  <h3>About Us</h3>
+  <div class="content">
+    <p>We are dedicated to providing expert legal and compliance support for your business needs. Our team ensures that you stay ahead in a complex legal environment.</p>
+  </div>
 </section>
 
 <!-- Services -->
 <section id="services">
-  <h2>Our Services</h2>
-  <div class="services-container">
-    <div class="service-box">
-      <h3>Incorporation & Business Registration</h3>
-      <p>We assist in company registration, partnership deeds, LLP registration, and other legal formation services.</p>
-    </div>
-    <div class="service-box">
-      <h3>Tax & Compliance</h3>
-      <p>Providing GST registration, income tax filings, and compliance management for businesses.</p>
-    </div>
-    <div class="service-box">
-      <h3>Trademark & Intellectual Property</h3>
-      <p>Trademark registration, patent filing, and IP rights protection services.</p>
-    </div>
-    <div class="service-box">
-      <h3>Legal Advisory</h3>
-      <p>Legal consultancy for business contracts, agreements, and dispute resolution.</p>
-    </div>
+  <h3>Our Services</h3>
+  <div class="content">
+    <p>Incorporation, Tax Filing, GST, Trademark, Legal Advisory, and more.</p>
   </div>
 </section>
 
 <!-- Contact -->
 <section id="contact">
-  <h2>Contact Us</h2>
-  <div class="contact-info">
-    <p><i class="fas fa-phone"></i> Phone: +91-1234567890</p>
-    <p><i class="fas fa-envelope"></i> Email: info@aparnaassociates.com</p>
-    <p><i class="fas fa-map-marker-alt"></i> Address: 123, Business Street, City, State, ZIP</p>
+  <h3>Contact Us</h3>
+  <div class="content">
+    <p>Phone: +91-XXXX-XXXXXX</p>
+    <p>Email: info@aparnaassociates.com</p>
+    <p>Address: 123, Business Street, City, State</p>
   </div>
 </section>
 
-<script>
-  function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  }
-</script>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2023 Aparna Associates. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
