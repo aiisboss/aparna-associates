@@ -3,22 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact Us - Aparna Associates</title>
+<title>Aparna Associates - Home</title>
 <!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<!-- Google Fonts for typography -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-<!-- Styles -->
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 <style>
+  /* Basic Reset & Variables */
   :root {
     --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --background-color: #ffffff;
+    --background-color: #f8f9fa;
     --text-color: #212529;
-    --border-radius: 8px;
-    --font-family: 'Poppins', 'Open Sans', sans-serif;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
+    --font-family: 'Open Sans', sans-serif;
   }
 
   body {
@@ -26,303 +22,112 @@
     font-family: var(--font-family);
     background-color: var(--background-color);
     color: var(--text-color);
-    line-height: 1.6;
   }
 
-  h1, h2, h3, h4 {
-    margin: 0;
-    font-weight: var(--font-weight-bold);
-  }
-
-  /* Container section */
-  .content-section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  /* Titles */
-  .section-title {
-    font-size: 3rem;
-    color: #222;
-    text-align: center;
-    font-weight: var(--font-weight-bold);
-    letter-spacing: 1px;
-  }
-
-  .section-title-underline {
-    width: 100px;
-    height: 4px;
-    background-color: var(--primary-color);
-    margin: 10px auto 30px auto;
-    border-radius: 2px;
-  }
-
-  .section-subtitle {
-    text-align: center;
-    font-size: 1.25rem;
-    color: #555;
-    margin-bottom: 50px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Grid layout */
-  .contact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-
-  /* Contact info styles */
-  .contact-info, .contact-form {
-    flex: 1 1 45%;
+  /* Navigation Styles */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background: #fff;
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 999;
   }
 
-  .contact-info:hover, .contact-form:hover {
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  }
-
-  /* Contact item styles */
-  .contact-item {
+  nav ul {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 25px;
-  }
-
-  .contact-icon-wrapper {
-    font-size: 2.5rem;
-    margin-right: 15px;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
-  }
-
-  .contact-icon-wrapper:hover {
-    color: #0056b3;
-  }
-
-  .contact-details h4 {
-    margin-bottom: 8px;
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-semibold);
-    color: #222;
-  }
-
-  .contact-details p {
+    justify-content: center;
+    padding: 15px 0;
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.4;
+    list-style: none;
   }
 
-  /* Form styles */
-  form {
-    display: flex;
-    flex-direction: column;
+  nav li {
+    margin: 0 20px;
   }
 
-  .form-group {
-    margin-bottom: 15px;
+  nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
   }
 
-  label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: var(--font-weight-semibold);
-    font-size: 0.95rem;
-    color: #333;
+  nav a:hover {
+    color: var(--primary-color);
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
+  /* Sections Styles */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 100px; /* for fixed nav */
+  text-align: center;
+}
 
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="tel"]:focus,
-  select:focus,
-  textarea:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
-    outline: none;
-  }
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 
-  textarea {
-    resize: vertical;
-    min-height: 150px;
-  }
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
 
-  .submit-button {
-    padding: 14px 30px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: var(--border-radius);
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 20px;
-    align-self: flex-start;
+/* Responsive */
+@media(max-width: 768px) {
+  body {
+    padding-top: 70px; /* for fixed nav */
   }
-
-  .submit-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-  }
-
-  /* Map styles */
-  iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: box-shadow 0.3s ease;
-  }
-
-  iframe:hover {
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  }
-
-  /* Responsive styles */
-  @media(max-width: 768px) {
-    .contact-grid {
-      flex-direction: column;
-    }
-    .contact-info,
-    .contact-form {
-      flex: 1 1 100%;
-    }
-    h1 {
-      font-size: 2.2rem;
-    }
-    .section-title {
-      font-size: 2rem;
-    }
-  }
+}
 </style>
 </head>
 <body>
 
-<!-- Contact Section -->
-<section class="content-section">
-    <h1 class="section-title">Contact Us</h1>
-    <div class="section-title-underline"></div>
-    <p class="section-subtitle">Get in touch with our expert team for all your business needs</p>
-    
-    <div class="contact-grid">
-        <!-- Contact Info -->
-        <div class="contact-info">
-            <div class="contact-item">
-                <div class="contact-icon-wrapper">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="contact-details">
-                    <h4>Head Office</h4>
-                    <p>Office No. 212, Second Floor, WZ-97,<br>
-                    Sunder Place Complex, Jwala Heri Market,<br>
-                    Paschim Vihar, New Delhi</p>
-                </div>
-            </div>
-            <div class="contact-item">
-                <div class="contact-icon-wrapper">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-details">
-                    <h4>Email Address</h4>
-                    <p><a href="mailto:contact.aparnaassociates@gmail.com">contact.aparnaassociates@gmail.com</a></p>
-                </div>
-            </div>
-            <div class="contact-item">
-                <div class="contact-icon-wrapper">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="contact-details">
-                    <h4>Phone Numbers</h4>
-                    <p>
-                        <a href="tel:+918076856909">+91 8076856909</a><br>
-                        <small>(CS Aparna Singh)</small><br><br>
-                        <a href="tel:+918076461946">+91 8076461946</a><br>
-                        <small>(Advocate Dileep Singh)</small>
-                    </p>
-                </div>
-            </div>
-            <div class="contact-item">
-                <div class="contact-icon-wrapper">
-                    <i class="fas fa-clock"></i>
-                </div>
-                <div class="contact-details">
-                    <h4>Business Hours</h4>
-                    <p>Monday - Saturday: 10:00 AM - 7:00 PM<br>
-                    Sunday: Closed</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Send us a Message</h3>
-            <!-- Replace action URL with your form handler -->
-            <form method="post" action="#">
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="name" required />
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" />
-                </div>
-                <div class="form-group">
-                    <label for="service">Service Interested In</label>
-                    <select id="service" name="service">
-                        <option value="">Select a Service</option>
-                        <option value="incorporation">Incorporation</option>
-                        <option value="compliances">Compliances</option>
-                        <option value="gst">GST Services</option>
-                        <option value="income-tax">Income Tax</option>
-                        <option value="trademark">Trademark Registration</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message *</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
-        </div>
-    </div>
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+    <li><a href="#about" onclick="scrollToSection('about')">About Us</a></li>
+    <li><a href="#services" onclick="scrollToSection('services')">Services</a></li>
+    <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Homepage Content -->
+<section id="home">
+  <h1>Welcome to Aparna Associates</h1>
+  <p>Your trusted partner for legal and business services. We are committed to providing expert guidance and support for your business needs.</p>
 </section>
 
-<!-- Google Map Embed -->
-<section class="content-section" style="padding-top: 0;">
-    <h2 class="section-title">Visit Our Office</h2>
-    <div class="section-title-underline"></div>
-    <div style="margin: 2rem auto; max-width: 1200px;">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.561328437097!2d77.10020277529041!3d28.666399575646206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d032311e98cd9%3A0xec961407c894c748!2sAparna%20%26%20Associates%20-%20Company%20Secretaries!5e1!3m2!1sen!2sin!4v1768149202226!5m2!1sen!2sin"
-            allowfullscreen="" loading="lazy"></iframe>
-    </div>
+<!-- Optional: About Us -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>Aparna Associates is a reputed firm offering professional legal and business consultancy services. Our team is dedicated to helping your business succeed.</p>
 </section>
+
+<!-- Optional: Services -->
+<section id="services">
+  <h2>Our Services</h2>
+  <p>We offer services including incorporation, compliance, GST, income tax, trademark registration, and more.</p>
+</section>
+
+<!-- Optional: Contact Link (if you want to include a contact section or page later) -->
+<!--
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Reach out to us for more information or assistance.</p>
+</section>
+-->
+
+<!-- Scripts for smooth scroll -->
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
 
 </body>
 </html>
