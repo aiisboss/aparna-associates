@@ -62,24 +62,73 @@ section {
   padding: 80px 20px;
   max-width: 1200px;
   margin: auto;
-  padding-top: 100px; /* for fixed nav */
+  padding-top: 120px; /* for fixed nav */
   text-align: center;
 }
 
-h1 {
+h1, h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 60px;
 }
 
 p {
   font-size: 1.2rem;
   line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* Services Grid */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Contact info styles */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+/* Button styles for future use */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0069d9;
 }
 
 /* Responsive */
 @media(max-width: 768px) {
   body {
     padding-top: 70px; /* for fixed nav */
+  }
+  section {
+    padding: 60px 20px;
   }
 }
 </style>
@@ -102,25 +151,45 @@ p {
   <p>Your trusted partner for legal and business services. We are committed to providing expert guidance and support for your business needs.</p>
 </section>
 
-<!-- Optional: About Us -->
+<!-- About Us -->
 <section id="about">
   <h2>About Us</h2>
   <p>Aparna Associates is a reputed firm offering professional legal and business consultancy services. Our team is dedicated to helping your business succeed.</p>
+  <p>We specialize in incorporation, compliance, GST, income tax, trademark registration, and more.</p>
 </section>
 
-<!-- Optional: Services -->
+<!-- Services -->
 <section id="services">
   <h2>Our Services</h2>
-  <p>We offer services including incorporation, compliance, GST, income tax, trademark registration, and more.</p>
+  <div class="services-container">
+    <div>
+      <h3>Incorporation & Business Registration</h3>
+      <p>We assist in company registration, partnership deeds, LLP registration, and other legal formation services.</p>
+    </div>
+    <div>
+      <h3>Tax & Compliance</h3>
+      <p>Providing GST registration, income tax filings, and compliance management for businesses.</p>
+    </div>
+    <div>
+      <h3>Trademark & Intellectual Property</h3>
+      <p>Trademark registration, patent filing, and IP rights protection services.</p>
+    </div>
+    <div>
+      <h3>Legal Advisory</h3>
+      <p>Legal consultancy for business contracts, agreements, and dispute resolution.</p>
+    </div>
+  </div>
 </section>
 
-<!-- Optional: Contact Link (if you want to include a contact section or page later) -->
-<!--
+<!-- Contact Info -->
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>Reach out to us for more information or assistance.</p>
+  <div class="contact-info">
+    <p><i class="fas fa-phone"></i> Phone: +91-1234567890</p>
+    <p><i class="fas fa-envelope"></i> Email: info@aparnaassociates.com</p>
+    <p><i class="fas fa-map-marker-alt"></i> Address: 123, Business Street, City, State, ZIP</p>
+  </div>
 </section>
--->
 
 <!-- Scripts for smooth scroll -->
 <script>
