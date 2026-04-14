@@ -723,3 +723,77 @@ a:hover {
 html, body {
     overflow-x: hidden;
 }
+/* =========================
+   FINAL MEGA MENU FIX
+   ========================= */
+
+/* reset any broken behavior */
+.sub-menu {
+    all: unset;
+}
+
+/* rebuild dropdown clean */
+.menu-item-has-children {
+    position: relative;
+}
+
+.menu-item-has-children .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 600px;
+    max-width: calc(100vw - 40px);
+
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 4px solid #f59e0b;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+/* show dropdown */
+.menu-item-has-children:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* fix items */
+.sub-menu li {
+    list-style: none;
+}
+
+.sub-menu a {
+    display: block;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.sub-menu a:hover {
+    background: #6366f1;
+    color: white;
+}
+
+/* 🔥 IMPORTANT: last menu opens LEFT */
+.menu-item-has-children:last-child .sub-menu {
+    left: auto;
+    right: 0;
+}
+
+/* remove horizontal scroll */
+html, body {
+    overflow-x: hidden;
+}
