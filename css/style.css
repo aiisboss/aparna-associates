@@ -723,3 +723,15 @@ a:hover {
 .main-nav li {
     list-style: none;
 }
+/* DEFAULT DROPDOWN (normal items) */
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+/* 🔥 RIGHT EDGE FIX (for LICENSE) */
+.menu-right .sub-menu {
+    left: auto;
+    right: 0;   /* shift to left side */
+}
