@@ -224,15 +224,17 @@ a:hover {
 .sub-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    
+    left: 50%;                     
+    transform: translateX(-50%);   
 
     background: var(--white);
     min-width: 650px;
+    max-width: 90vw;               
 
     box-shadow: var(--shadow-xl);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(15px);
     transition: all 0.3s ease;
 
     list-style: none;
@@ -241,10 +243,10 @@ a:hover {
     border-radius: 0 0 12px 12px;
     z-index: 1000;
 
-    /* 🔥 GRID SYSTEM */
-     display: grid !important;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+}
 
     /* ❌ REMOVE SCROLL */
     max-height: none;
