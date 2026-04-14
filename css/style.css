@@ -761,3 +761,6 @@ nav ul li ul li a:hover {
     background: #6366f1;
     color: white;
 }
+header, nav {
+    overflow: visible !important;
+}
