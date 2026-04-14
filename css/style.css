@@ -727,7 +727,7 @@ a:hover {
 .sub-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: auto;
 }
 
 /* 🔥 RIGHT EDGE FIX (for LICENSE) */
