@@ -225,24 +225,30 @@ a:hover {
     position: absolute;
     top: 100%;
     left: 0;
+
     background: var(--white);
-    min-width: 320px;
-    max-width: 320px;
+    min-width: 650px;
+
     box-shadow: var(--shadow-xl);
     opacity: 0;
     visibility: hidden;
     transform: translateY(15px);
     transition: all 0.3s ease;
+
     list-style: none;
-    padding: 15px 0;
+    padding: 20px;
     border-top: 4px solid var(--accent-color);
     border-radius: 0 0 12px 12px;
     z-index: 1000;
-    
-    /* VERTICAL SCROLL for long menus */
-    max-height: 450px;
-    overflow-y: auto;
-    overflow-x: hidden;
+
+    /* 🔥 GRID SYSTEM */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    /* ❌ REMOVE SCROLL */
+    max-height: none;
+    overflow: visible;
 }
 
 /* Custom scrollbar for dropdown */
@@ -266,9 +272,8 @@ a:hover {
 }
 
 .sub-menu li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    display: block;
     width: 100%;
+    border: none;
 }
 
 .sub-menu li:last-child {
@@ -277,21 +282,18 @@ a:hover {
 
 .sub-menu a {
     display: block;
-    padding: 14px 25px;
-    color: var(--text-dark);
+    padding: 14px;
+    background: var(--bg-light);
+    border-radius: 10px;
+    text-align: center;
     font-size: 14px;
     font-weight: 500;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    transition: 0.3s;
 }
 
 .sub-menu a:hover {
-    background: linear-gradient(90deg, var(--bg-light) 0%, transparent 100%);
-    color: var(--accent-color);
-    padding-left: 30px;
-    text-decoration: none;
+    background: var(--accent-color);
+    color: white;
 }
 
 .sub-menu a:before {
