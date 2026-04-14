@@ -739,3 +739,12 @@ a:hover {
     right: 0;
     left: auto;
 }
+.license-menu {
+    position: relative;
+}
+
+.license-menu .sub-menu {
+    left: auto !important;
+    right: 0 !important;
+    transform: none !important;
+}
