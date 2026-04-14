@@ -735,3 +735,7 @@ a:hover {
     left: auto;
     right: 0;   /* shift to left side */
 }
+.license-menu .sub-menu {
+    right: 0;
+    left: auto;
+}
