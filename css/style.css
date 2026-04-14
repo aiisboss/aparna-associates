@@ -711,49 +711,53 @@ a:hover {
         right: 20px;
     }
 }
-/* DROPDOWN FIX */
-nav ul {
-    list-style: none;
-    display: flex;
-}
+/* MEGA MENU GRID */
 
 nav ul li {
     position: relative;
 }
 
-/* HIDE SUBMENU */
+/* dropdown container */
 nav ul li ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background: white;
-    padding: 10px 0;
-    min-width: 220px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    
-    /* 🔥 THIS IS THE MAIN FIX */
-    flex-direction: column;
+    padding: 20px;
+    min-width: 500px;
+
+    /* 🔥 GRID MAGIC */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-/* SHOW ON HOVER */
+/* show on hover */
 nav ul li:hover ul {
-    display: flex;
+    display: grid;
 }
 
-/* SUBMENU ITEMS */
+/* each item */
 nav ul li ul li {
-    width: 100%;
+    list-style: none;
 }
 
-/* LINKS */
+/* box style */
 nav ul li ul li a {
     display: block;
-    padding: 10px 20px;
-    color: #333;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-/* HOVER EFFECT */
+/* hover */
 nav ul li ul li a:hover {
-    background: #f1f5f9;
+    background: #6366f1;
+    color: white;
 }
