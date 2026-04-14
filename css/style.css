@@ -715,36 +715,8 @@ a:hover {
         right: 20px;
     }
 }
-.main-nav ul {
-    list-style: none;   
-    margin: 0;
-    padding: 0;
-}
-.main-nav li {
-    list-style: none;
-}
-/* DEFAULT DROPDOWN (normal items) */
-.sub-menu {
-    position: absolute;
-    top: 100%;
+.menu-item-has-children:last-child .sub-menu {
     left: auto;
-}
-
-/* 🔥 RIGHT EDGE FIX (for LICENSE) */
-.menu-right .sub-menu {
-    left: auto;
-    right: 0;   /* shift to left side */
-}
-.license-menu .sub-menu {
     right: 0;
-    left: auto;
-}
-.license-menu {
-    position: relative;
-}
-
-.license-menu .sub-menu {
-    left: auto !important;
-    right: 0 !important;
-    transform: none !important;
+    transform: none;
 }
