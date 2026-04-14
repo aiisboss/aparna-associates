@@ -229,7 +229,7 @@ a:hover {
     transform: translateX(-50%);   
 
     background: var(--white);
-    min-width: 650px;
+    width: 650px;
     max-width: 90vw;               
 
     box-shadow: var(--shadow-xl);
@@ -719,4 +719,7 @@ a:hover {
     left: auto;
     right: 0;
     transform: none;
+}
+html, body {
+    overflow-x: hidden;
 }
