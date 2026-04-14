@@ -711,27 +711,32 @@ a:hover {
         right: 20px;
     }
 }
-/* MEGA MENU FIX FINAL */
+/* FIX MEGA MENU PROPERLY */
 
+nav {
+    position: relative;
+}
+
+/* parent */
 nav ul li {
-    position: static;   /* 🔥 VERY IMPORTANT */
+    position: relative;
 }
 
 /* dropdown */
 nav ul li ul {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;   /* 🔥 KEY CHANGE */
+    top: 80px;         /* adjust based on your navbar height */
     left: 0;
 
-    width: 100vw;   /* 🔥 FULL SCREEN WIDTH */
-    padding: 30px;
+    width: 100vw;      /* full screen */
+    padding: 30px 80px;
 
     background: white;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 
     z-index: 9999;
