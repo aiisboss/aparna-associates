@@ -792,7 +792,56 @@ html, body {
     left: auto;
     right: 0;
 }
+/* 🔥 LICENSE DROPDOWN (SEPARATE CLEAN SYSTEM) */
 
+.license-menu {
+    position: relative;
+}
+
+/* dropdown box */
+.license-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;   /* 🔥 always open left */
+
+    width: 500px;
+    max-width: calc(100vw - 40px);
+
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+/* show */
+.license-menu:hover .license-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* items */
+.license-dropdown a {
+    display: block;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.license-dropdown a:hover {
+    background: #6366f1;
+    color: white;
+}
 /* remove horizontal scroll */
 html, body {
     overflow-x: hidden;
