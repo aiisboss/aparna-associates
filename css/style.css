@@ -846,3 +846,8 @@ html, body {
 html, body {
     overflow-x: hidden;
 }
+/* 🔥 FORCE LICENSE MENU TO OPEN LEFT */
+.license-menu .sub-menu {
+    left: auto;
+    right: 0;
+}
