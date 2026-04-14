@@ -711,3 +711,49 @@ a:hover {
         right: 20px;
     }
 }
+/* DROPDOWN FIX */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+/* HIDE SUBMENU */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    padding: 10px 0;
+    min-width: 220px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    
+    /* 🔥 THIS IS THE MAIN FIX */
+    flex-direction: column;
+}
+
+/* SHOW ON HOVER */
+nav ul li:hover ul {
+    display: flex;
+}
+
+/* SUBMENU ITEMS */
+nav ul li ul li {
+    width: 100%;
+}
+
+/* LINKS */
+nav ul li ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+}
+
+/* HOVER EFFECT */
+nav ul li ul li a:hover {
+    background: #f1f5f9;
+}
