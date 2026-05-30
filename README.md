@@ -147,7 +147,7 @@ Add these files to the `images/` folder:
 
 **Find and replace:**
 ```html
-+91 8076856909
++91 8527721958
 +91 8076461946
 pcsaparnasingh@gmail.com
 Office No. 212, 2nd Floor, WZ-97...
@@ -308,13 +308,13 @@ A: Just push to GitHub, Vercel auto-deploys in 1-2 minutes!
 
 Make sure to update these everywhere:
 
-- Phone: +91 8076856909, +91 8076461946
+- Phone: +91 8527721958, +91 8076461946
 - Email: pcsaparnasingh@gmail.com
 - Office: Office No. 212, WZ-97, Paschim Vihar, Delhi 110063
 - Facebook: https://www.facebook.com/share/1AXvSq29VJ/
 - LinkedIn: https://www.linkedin.com/company/aparna-associates/
 - Instagram: https://www.instagram.com/aparna_associates/
-- WhatsApp: +91 8076856909
+- WhatsApp: +91 8527721958
 
 ---
 
